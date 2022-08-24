@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "402541157562",
+    "firebase_url": "https://slash-chat-uat-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "slash-chat-uat",
+    "storage_bucket": "slash-chat-uat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402541157562:android:d135db47d7746f2a6f3683",
+        "android_client_info": {
+          "package_name": "com.sample.architecture.dev.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402541157562-d3k7bt9tvvp0josfb25m24ngv7krrkh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4uZxhfvR_wjb0S-NWyO-vlLQR_ioWMIw"
+        }
+      ]
+    }
+  ],
+  "configuration_version": "1"
+}
