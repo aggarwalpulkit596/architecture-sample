@@ -4,6 +4,8 @@ import extensions.buildConfigStringField
 import dependencies.Dependencies
 import dependencies.AnnotationProcessorsDependencies
 import extensions.kapt
+import java.util.Properties
+import java.io.FileInputStream
 
 plugins {
     id(BuildPlugins.ANDROID_LIBRARY)
@@ -12,6 +14,10 @@ plugins {
 }
 
 android {
+    val apikeyPropertiesFile = rootProject.file("domain/apikey.properties")
+    val apikeyProperties = Properties()
+    apikeyProperties.load(FileInputStream(apikeyPropertiesFile))
+
     compileSdk = BuildAndroidConfig.COMPILE_SDK_VERSION
 
     defaultConfig {
@@ -45,6 +51,7 @@ android {
             it.buildConfigIntField("ARCH_SAMPLE_DATABASE_VERSION", 1)
             it.buildConfigStringField("VERSION_CODE", BuildAndroidConfig.VERSION_CODE.toString())
             it.buildConfigStringField("ARCH_SAMPLE_BASE_URL", "https://newsapi.org/v2/")
+            it.buildConfigStringField("API_KEY", apikeyProperties["API_KEY"].toString())
         }
     }
     compileOptions {

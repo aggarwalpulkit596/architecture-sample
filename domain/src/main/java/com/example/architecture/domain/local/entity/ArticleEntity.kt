@@ -5,8 +5,7 @@ import androidx.room.PrimaryKey
 import com.squareup.moshi.JsonClass
 
 @Entity(tableName = "cachedArticles")
-@JsonClass(generateAdapter = true)
-data class Article (
+data class ArticleEntity (
     @PrimaryKey(autoGenerate = true)
     val id:Int,
     val url:String,
