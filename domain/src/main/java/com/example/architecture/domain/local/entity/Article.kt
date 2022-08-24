@@ -2,8 +2,10 @@ package com.example.architecture.domain.local.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.squareup.moshi.JsonClass
 
 @Entity(tableName = "cachedArticles")
+@JsonClass(generateAdapter = true)
 data class Article (
     @PrimaryKey(autoGenerate = true)
     val id:Int,

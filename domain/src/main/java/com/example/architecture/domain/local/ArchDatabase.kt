@@ -3,6 +3,7 @@ package com.example.architecture.domain.local
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.example.architecture.domain.BuildConfig
+import com.example.architecture.domain.local.dao.ArticleDao
 
 @Database(
     entities = [],
@@ -10,4 +11,5 @@ import com.example.architecture.domain.BuildConfig
     version = BuildConfig.ARCH_SAMPLE_DATABASE_VERSION,
 )
 abstract class ArchDatabase: RoomDatabase() {
+    abstract fun getArticleDao(): ArticleDao
 }
