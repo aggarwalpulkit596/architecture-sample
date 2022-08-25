@@ -56,6 +56,7 @@ object Dependencies {
     const val DAGGER = "com.google.dagger:hilt-android:${BuildDependenciesVersions.DAGGER}"
     const val DAGGER_WORK = "androidx.hilt:hilt-work:1.0.0"
     const val TIMBER = "com.jakewharton.timber:timber:${BuildDependenciesVersions.TIMBER}"
+    const val OKHTTP = "com.squareup.okhttp3:okhttp:4.9.3"
     const val RETROFIT = "com.squareup.retrofit2:retrofit:${BuildDependenciesVersions.RETROFIT}"
     const val RETROFIT_CONVERTER =
         "com.squareup.retrofit2:converter-moshi:${BuildDependenciesVersions.RETROFIT}"
