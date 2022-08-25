@@ -11,6 +11,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 import com.example.architecture.domain.BuildConfig
+import com.example.architecture.domain.remote.HeaderInterceptor
 
 @InstallIn(SingletonComponent::class)
 @Module
@@ -18,11 +19,12 @@ class ApiModule {
 
     @Provides
     @Singleton
-    fun providesHttpClient(): OkHttpClient {
+    fun providesHttpClient(headerInterceptor: HeaderInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
             .connectTimeout(CONNECT_TIMEOUT.toLong(), TimeUnit.SECONDS)
             .readTimeout(READ_TIMEOUT.toLong(), TimeUnit.SECONDS)
             .writeTimeout(WRITE_TIMEOUT.toLong(), TimeUnit.SECONDS)
+            .addInterceptor(headerInterceptor)
             .build()
     }
 
