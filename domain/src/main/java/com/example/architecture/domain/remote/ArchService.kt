@@ -7,7 +7,6 @@ import retrofit2.http.Header
 import retrofit2.http.Headers
 
 interface ArchService {
-    @Headers("Authorization: ${BuildConfig.API_KEY}")
     @GET("top-headlines?country=us")
     suspend fun getArticles(): ArticleListResponse
 }
